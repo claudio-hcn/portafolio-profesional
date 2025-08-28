@@ -115,7 +115,7 @@ nav {
 
 /* Secciones */
 .section {
-    min-height: 100vh;
+    min-height: 80vh;
     padding: 6rem 5% 4rem;
     max-width: 1200px;
     margin: 0 auto;
@@ -145,14 +145,16 @@ nav {
     align-items: center;
     justify-content: space-between;
     gap: 4rem;
-    background: linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1));
+    /* background: linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1)); */
 }
 
 .hero-content {
+    
     flex: 1;
 }
 
 .hero-title {
+    padding-top: 10vh;
     font-size: 3.5rem;
     font-weight: 800;
     line-height: 1.1;
@@ -251,7 +253,14 @@ nav {
     box-shadow: var(--shadow-hover);
     animation: float 3s ease-in-out infinite;
 }
-
+/* Estilos para la imagen dentro */
+.profile-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* 👈 IMPORTANTE: mantiene proporción sin deformar */
+    object-position: center; /* 👈 Centra la imagen */
+    border-radius: 50%;
+}
 @keyframes float {
     0%,
     100% {
@@ -339,6 +348,11 @@ nav {
     text-align: center;
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
+    font-size: 12px;
+}
+
+.skill-item img{
+    height: 20px;
 }
 
 .skill-item:hover {
